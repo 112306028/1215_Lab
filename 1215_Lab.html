@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: block;
+            align-items: flex-start;
+            height: 100vh;
+            justify-content: space-around;
+        }
+        p {
+            font-size: medium;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 2px;
+            transition: transform 0.2s;
+        }
+
+        #button1 { background-color: #8bbbdc; }
+        #button2 { background-color: #e6a199; }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num1=window.prompt("Enter first number: ");
+        var num2=window.prompt("Enter second number: ");
+        if(parseInt(num1) > parseInt(num2)) {
+            document.body.style.backgroundColor='lightblue';
+            document.writeln(num1+" > "+num2);
+        } else if(parseInt(num1) < parseInt(num2)){
+            document.body.style.backgroundColor='orange';
+            document.writeln(num2+" > "+num1);
+        } else{
+            document.body.style.backgroundColor='lightyellow';
+            document.writeln(num1+" == "+num2);
+        }
+    </script>
+    
+    <button id="button1" class="button" onclick="alert(num1);">1st button</button>
+    <button id="button2" class="button" onclick="alert(num2);">2nd button</button>
+</body>
+</html>
